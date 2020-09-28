@@ -14,6 +14,13 @@
 \usepackage{array}
 \usepackage{wrapfig}
 \usepackage{tabu}
+\usepackage{longtable}
+\usepackage{eurosym}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 
 % Titulinio aprašas
 \university{Vilniaus universitetas}
@@ -116,8 +123,126 @@
 	\end{enumerate}
 
 \section{Budget}
+This section includes all necessary costs for the project: employee salaries, equipment, licenses, third-party services, etc.
+
+\begin{center}
+	\setstretch{1.0}
+	\small
+	\begin{longtable}{|L{2cm}|C{1cm}|C{1cm}|C{1cm}|C{1cm}|C{1cm}|C{1cm}|L{1cm}|}
+		\caption{Budget item and cost across the duration of the project}
+		\label{table:EmployeeSalary}
+		\\ \hline
+		Budget item &
+		\multicolumn{1}{c|}{Month 1} &
+		\multicolumn{1}{c|}{Month 2} &
+		\multicolumn{1}{c|}{Month 3} &
+		\multicolumn{1}{c|}{Month 4} &
+		\multicolumn{1}{c|}{Month 5} &
+		\multicolumn{1}{c|}{Month 6} &												
+		\multicolumn{1}{c|}{\textbf{Total, \euro}} \\ \hline
+		Project Manager Salary &
+		3000&
+		&
+		3000&
+		3000&
+		3000&
+		3000&
+		\textbf{18000}\\ \hline
+		Scrum Master Salary &
+		&
+		&
+		&
+		&
+		&
+		&
+		\textbf{xxxx}\\ \hline
+		Business Analyst Salary &
+		&
+		&
+		&
+		&
+		&
+		&
+		\textbf{gggg}\\ \hline
+		Software architect Salary &
+		&
+		&
+		&
+		&
+		&
+		&
+		\textbf{18000}\\ \hline
+		Senior software developer Salary &
+		&
+		&
+		&
+		&
+		&
+		&
+		\textbf{18000}\\ \hline
+		Software developer Salary &
+		&
+		&
+		&
+		&
+		&
+		&
+		\textbf{ggg}\\ \hline
+		Test Analyst Salary &
+		1800&
+		1800&
+		1800&
+		1800&
+		1800&
+		1800&
+		\textbf{ggg}\\ \hline										
+\end{longtable}
+\end{center}
+
+
 
 \section{Risks and Responses}
+Risks are divided into two main categories: positive risks and negative risks. All risks have a probability and an impact to the project.
 
+\subsection{Negative Risks}
+Table \ref{table:NegativeRisksReponses} covers risks with negative impact to the project and the recommended response/s to mitigate said risk.
+
+\begin{center}
+	\setstretch{1.0}
+	\small
+	\begin{longtable}{|C{1cm}|L{4.55cm}|C{2cm}|C{2cm}|L{4.55cm}|}
+		\caption{Negative Risks and Responses}
+		\label{table:NegativeRisksReponses}
+		\\ \hline
+		Risk code &
+		\multicolumn{1}{c|}{Risk Description} &		
+		Probability &
+		Impact &
+		\multicolumn{1}{c|}{Response} \\ \hline
+		R1 &
+		\textbf{Unfamiliarity with development process used}. Team members unfamiliar with development process will have a slower workflow resulting in longer delivery times&
+		Low &
+		Medium &
+		\textbf{Team will perform a bi-weekly retrospective meeting} at the end of the week. These retrospectives should create a safe space for team members to share their honest feedback on what's going well and what isn't, and to generate a discussion around what could be improved next time regarding the development process during the sprint.		\\ \hline
+		R2 &
+		\textbf{Inefficiency of the development process}. inefficient development process lead time and lowers deliverable quality.&
+		Low&
+		High&
+		{\textbf{Perform bi-monthly squad health checks} to gather what each team member feels about the following aspects: delivering value, easy to release, health of codebase, mission, speed, suitable process, support and teamwork. Results will allow to make necessary plans on which aspect/s to improve resulting in higher team motivation and synergy as well as adjusting the unfamiliar.\newline \textbf{Collect data of KPIs}, such as, registered defects per day, commits per day, what tasks are assigned to which member, lead time, etc. in order to follow the current state of the development process and see if made changes affected those KPIs}\\ \hline		
+		R3 &
+		\textbf{Low team motivation, synergy and/or coordination}. Low motivation, synergy and/or coordination results in slower lead time, lack of innovation and is prone to higher no. of errors during the execution of the project &
+		Medium&
+		Medium&
+{\textbf{Perform bi-monthly squad health checks} to gather what each team member feels about the following aspects: fun, learning, pawns or players, support and teamwork. Results will allow to make necessary plans on which aspect/s to improve resulting in higher team motivation and synergy.\newline \textbf{Promote an environment to nurture T-shaped professionals} resulting in increased team synergy and coordination}\\ \hline
+		R4 &
+		\textbf{Insufficient team skill/knowledge regarding tech-stack}. A Lack of skill and knowledge of the tech stack used in a project results in higher amount and severity of bugs, slower development time and bad practices&
+		Medium&
+		High&
+		Perform a different tech analysis in order to gauge the difficulty to master said tech, it's ease of use, functionality, how comfortable is the team to use said tech and so on. Performed analysis will let to pick the tech that is not only suited, but is also familliar to the team members.
+		Organise knowledge sharings/workshops at the begining of the project in order for the team to fammiliarize themselves to the tech-stack\\ \hline					
+	\end{longtable}
+\end{center}
+
+\subsection{Positive Risks}
+Table section risks with positive impact to the project and the recommended response/s to achieve those risk.
 \end{document}
-
