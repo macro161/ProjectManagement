@@ -56,7 +56,8 @@
 
 % Po lentelės antraštės prefiksu bus dedamas taškas
 \RequirePackage{caption}
-\captionsetup*[table]{labelsep=period}
+\DeclareCaptionLabelFormat{workaround}{#1 #2}
+\captionsetup*[table]{name=Table, labelsep=period,labelformat=workaround}
 \captionsetup*[figure]{labelsep=period, name=pav}
 
 % Informacijos tituliniame puslapyje kintamieji
