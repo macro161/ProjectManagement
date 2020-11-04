@@ -13,7 +13,6 @@
 \usepackage{subfig}
 \usepackage{array}
 \usepackage{wrapfig}
-\usepackage{tabu}
 \usepackage{longtable}
 \usepackage{eurosym}
 
@@ -30,7 +29,7 @@
 \title{Projektų valdymas}
 \titleineng{Project management}
 \status{1 kurso magistratūros studentai}
-\author{Šarūnas Kazinieras Buteikis}
+\author{Šarūnas Kazimieras Buteikis}
 \secondauthor{Matas Savickis}
 \thirdauthor{Irmantas Ivanauskas}
 \supervisor{dr. Giedrius Slivinskas}
@@ -138,6 +137,7 @@
 		
 
 \section{Project Stages}
+
 	\subsection{Project initiation}
 	\textbf{Deadline 2020-11-01}
 	Within the initiation phase, the business problem or opportunity is identified, a solution is defined, a project is formed, and a project team is appointed to build and deliver the solution to the customer. A business case is created to define the problem or opportunity in detail and identify a preferred solution for implementation. 
@@ -329,9 +329,17 @@ This section includes all necessary costs for the project: employee salaries, eq
 		120&
 		120&
 		120&
-		\textbf{720}\\ \hline		
+		\textbf{720}\\ \hline	
+		Marketing&
+		20000&
+		-&
+		-&
+		-&
+		-&
+		-&
+		\textbf{20000} \\ \hline			
 		\multicolumn{7}{|r|}{\textbf{TOTAL:}}&
-		\textbf{113282}\\ \hline
+		\textbf{93282}\\ \hline
 \end{longtable}
 \end{center}
 
@@ -355,38 +363,68 @@ Table \ref{table:NegativeRisksReponses} covers risks with negative impact to the
 		Probability &
 		Impact &
 		\multicolumn{1}{c|}{Response} \\ \hline
-		R1 &
+		NR1 &
 		\textbf{Unfamiliarity with development process used}. Team members unfamiliar with development process will have a slower workflow resulting in longer delivery times&
 		Low &
 		Medium &
 		\textbf{Team will perform a bi-weekly retrospective meeting} at the end of the week. These retrospectives should create a safe space for team members to share their honest feedback on what's going well and what isn't, and to generate a discussion around what could be improved next time regarding the development process during the sprint.		\\ \hline
-		R2 &
+		NR2 &
 		\textbf{Inefficiency of the development process}. inefficient development process lead time and lowers deliverable quality.&
 		Low&
 		High&
 		{\textbf{Perform bi-monthly squad health checks} to gather what each team member feels about the following aspects: delivering value, easy to release, health of codebase, mission, speed, suitable process, support and teamwork. Results will allow to make necessary plans on which aspect/s to improve resulting in higher team motivation and synergy as well as adjusting the unfamiliar.\newline \textbf{Collect data of KPIs}, such as, registered defects per day, commits per day, what tasks are assigned to which member, lead time, etc. in order to follow the current state of the development process and see if made changes affected those KPIs}\\ \hline		
-		R3 &
+		NR3 &
 		\textbf{Low team motivation, synergy and/or coordination}. Low motivation, synergy and/or coordination results in slower lead time, lack of innovation and is prone to higher no. of errors during the execution of the project &
 		Medium&
 		Medium&
 {\textbf{Perform bi-monthly squad health checks} to gather what each team member feels about the following aspects: fun, learning, pawns or players, support and teamwork. Results will allow to make necessary plans on which aspect/s to improve resulting in higher team motivation and synergy.\newline \textbf{Promote an environment to nurture T-shaped professionals} resulting in increased team synergy and coordination}\\ \hline
-		R4 &
+		NR4 &
 		\textbf{Insufficient team skill/knowledge regarding tech-stack}. A Lack of skill and knowledge of the tech stack used in a project results in higher amount and severity of bugs, slower development time and bad practices&
 		Medium&
 		High&
 		Perform a different tech analysis in order to gauge the difficulty to master said tech, it's ease of use, functionality, how comfortable is the team to use said tech and so on. Performed analysis will let to pick the tech that is not only suited, but is also familliar to the team members.
 		Organise knowledge sharings/workshops at the begining of the project in order for the team to fammiliarize themselves to the tech-stack\\ \hline	
-		R5 &
+		NR5 &
 		\textbf{System development stallment due to covid.} Team members contracting COVID-19 will slow down and eventually stop the development of the system.&
 		Medium&
 		High&
-		\textbf{Follow and enforce government decisions regarding the epidemic within the team.} Adhere to health rules and regulations. Allow team members to work remotely, follow safety guidelines and enforce social distancing, wearing of masks, etc., within the team.\\ \hline 			
+		\textbf{Follow and enforce government decisions regarding the epidemic within the team.} Adhere to health rules and regulations. Allow team members to work remotely, follow safety guidelines and enforce social distancing, wearing of masks, etc., within the team.\\ \hline 
+		NR6 &
+		\textbf{Failure to marked advertisements to target audience}. Due to not defining in our project scope market research, there is a high chance to completely miss our target audience	 &
+		High &
+		High &
+		\textbf{Outsource the market research and consult regarding marketing to another company.} Consult an advertisement company regarding advertising our product as well as outsource market research to define our target audience.  \\ \hline
 	\end{longtable}
 \end{center}
 
-\subsection{Positive Risks}
-Table section risks with positive impact to the project and the recommended response/s to achieve those risk.
 
+\subsection{Positive Risks}
+Table \ref{table:PositiveRisksReponses} section risks with positive impact to the project and the recommended response/s to achieve those risk.
+
+\begin{center}
+	\setstretch{1.0}
+	\small
+	\begin{longtable}{|C{1cm}|L{4.55cm}|C{2cm}|C{2cm}|L{4.55cm}|}
+		\caption{Positive Risks and Responses}
+		\label{table:PositiveRisksReponses}
+		\\ \hline
+		Risk code &
+		\multicolumn{1}{c|}{Risk Description} &		
+		Probability &
+		Impact &
+		\multicolumn{1}{c|}{Response} \\ \hline
+		PR1 &
+		\textbf{Overwhelming customer demand} Due to high customer demand our resources in production might be overwhelmed. Because of this, we will not be able to provide the necesarry resources to all our customers resulting in customer dissatisfaction. &
+		Low &
+		Medium &
+		Develop scalable infrastructure in order to meed high customer demand.\\ \hline		
+		PR2 &
+		\textbf{Project is under budget}. Due to a potential flaw in the planning and budgeting process we have resulted in finances that are not assigned to any budget item.  &
+		Medium &
+		High &
+		Budget will be reevaluated and spare finances will be invested where deemed needed.\\ \hline			
+	\end{longtable}
+\end{center}
 
 
 \end{document}
