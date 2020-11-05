@@ -75,19 +75,19 @@
 				Feedback will be collected after each monthly meeting and actions will be taken to address investor's concerns.}
 			\item{Employees - people who will work on self-service project.
 				Each employee gets relevant information about project status as soon as it becomes available.
-				Employee get monthly salary and if investors doesn't leave the project the employee's isn't fired.}
+				Employee gets monthly salary and if investors don't leave the project, the employee's isn't fired.}
 			\item{Tenants - people who will rent real estate from landlords.
 					Uses application services to track payments, deposits, takes pictures of utility counters.
-					Tenants gets monthly newsletter to the email about new feature in the system or any related information.}
+					Tenants get monthly newsletter to the email about new features or any system-related information.}
 			\item{Landlords - people who will lease real estate to the tenants.
-					Track payments, deposits, see utility counter pictures and pays real estate utility bills via other systems such as ,,Viena sąskaita".}
+					Track payments, deposits, see utility counter pictures and pay real estate utility bills via other systems such as "Viena sąskaita".}
 		\end{enumerate}
 
 	\subsection{Progress tracking}
-		To track the progress of a system we create a application feature milestone schedule.
-		During the investors meeting we present milestones we where able to achieve and adjustments made to the schedule and why those changes needed to be made.
-		We will track one milestone per Agile sprint.
-		Employees will be informed about milestone the same time a investors.
+		An application feature milestone is created in order to track the progress of the system.
+		During investor meetings, achieved milestones will be presented as well as made adjustments to the schedule with clarification why those adjustments needed to be made.
+		One milestone is tracked per one Agile sprint.
+		Employees will be informed about milestone the same time as investors.
 
 
 \section{Scope Statement}
@@ -181,9 +181,11 @@
 		\item{Prepare development environments} - prepare environments for development and production deployment
 		\item{Create UI wireframes} - create key concepts of UI
 		\item{Make legal analysis} - make analysis of rent laws and legal environment in Lithuania
+		\item {Sensitive data analysis} - analysis to determine what data is considered sensitive and must be stored in such a way to meet GDPR regulations
 		\item{Development of user authorization} - create ability to login and registration to our system
 		\item{Development of database structure} - choose DBMS and make core database structure
 		\item{Integrations with Banks} - integrate ability to check persons identity with e-banking systems
+		\item{Integration with bulk payment systems} - integrate rent payments with other bulk payment systems, e.g., "Mano gilė", "Viena sąskaita".
 		\item{Ability to track payment details} - create ability for user to track his payment details
 		\item{Chat or messaging} - ability to write a message for tenant/landlord
 		\item{Comment section about tenant/landlord/real estate} - ability to write and read comments about tenant/landlord/real estate
@@ -364,12 +366,9 @@ This section includes all necessary costs for the project: employee salaries, eq
 
 \section{Project profit calculations}
 
-\section{Risks and Responses}
-Risks are divided into two main categories: positive risks and negative risks. All risks have a probability and an impact to the project.
+\section{Product necessity research}
 
-\subsection{Project specific risks}
-
-\subsection{Project termination conditions}
+\section{Project termination conditions}
 	To predict if our project is worth working on we will conduct target audiance market research.
 	Reseach will be conducted before start of development, mid development and one month before lauch.
 	We will show to a research participants the application that is already developed and the UI/UX mocks.
@@ -379,6 +378,37 @@ Risks are divided into two main categories: positive risks and negative risks. A
 	Another project stoking point would be if in the middle of project Cost Variance(CV) would be lower then -50000 euros.
 	In such case we would announce this information in the investors meeting and let them to decide if they want to continue investing in the project or should project be terminated.
 
+
+\section{Risks and Responses}
+Risks are divided into two main categories: positive risks and negative risks. All risks have a probability and an impact to the project.
+
+\subsection{Project specific risks}
+Table \ref{table:NegativeProjectRisksResponses} covers negative risks that are specific to the project.
+
+\begin{center}
+	\setstretch{1.0}
+	\small
+	\begin{longtable}{|C{1cm}|L{4.55cm}|C{2cm}|C{2cm}|L{4.55cm}|}
+		\caption{Positive Risks and Responses}
+		\label{table:NegativeProjectRisksResponses}
+		\\ \hline
+		Risk code &
+		\multicolumn{1}{c|}{Risk Description} &		
+		Probability &
+		Impact &
+		\multicolumn{1}{c|}{Response} \\ \hline
+		NPR1 &
+		\textbf{Legal problems regarding data storage of house utility metrics}. We might be prohibited to store photographs that show house utility metrics (e.g., electrical counter numbers, gas counter numbers and so on.) meaning we will be unable to implement and promote one of our products selling points&
+		Medium &
+		High &
+		Legal analysis of data regulations regarding storage of sensitive data is considered top priority and must be done as soon as possible.\\ \hline		
+		NPR2 &
+		\textbf{Failure to integrate external systems}. Without being able to integrate our system with external bulk payment systems like "Viena sąskaita", "Mano gilė", .etc, .etc, we will fail to meet one of our expected benefits - being able to pay through our system, resulting in our app being used and gaining less traction as well as failing to meet our defined expected benefits&
+		Medium&
+		High&
+		Tasks, associated with bulk payment system integration must be considered top priority and done as soon as possible.\\ \hline			
+	\end{longtable}
+\end{center}
 
 	It is also possible that some investors would leave the project at any given time without a objective reason and in short time we wouldn't be able to find new investors to work with and the project would be terminated.
 
@@ -451,12 +481,12 @@ Table \ref{table:PositiveRisksReponses} section risks with positive impact to th
 		\textbf{Overwhelming customer demand} Due to high customer demand our resources in production might be overwhelmed. Because of this, we will not be able to provide the necesarry resources to all our customers resulting in customer dissatisfaction. &
 		Low &
 		Medium &
-		Develop scalable infrastructure in order to meed high customer demand.\\ \hline		
+		Develop scalable infrastructure in order to meet high customer demand.\\ \hline		
 		PR2 &
 		\textbf{Project is under budget}. Due to a potential flaw in the planning and budgeting process we have resulted in finances that are not assigned to any budget item.  &
 		Medium &
 		High &
-		Budget will be reevaluated and spare finances will be invested where deemed needed.\\ \hline			
+		Budget will be reevaluated and spare finances will be invested where deemed necessary.\\ \hline			
 	\end{longtable}
 \end{center}
 
